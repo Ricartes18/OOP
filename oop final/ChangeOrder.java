@@ -17,7 +17,7 @@ public class ChangeOrder {
         
         for (int i = 0; i < cOrder.size(); i++) {
             Order item = cOrder.get(i);
-            System.out.printf("%d. %d x %-13s = P%.2f%n",i + 1, item.getQuantity(), item.getchName(), item.getTotal());
+            System.out.printf("%d. %d x %-13s = P%.2f%n",i + 1, item.getQuantity(), item.getchName(), item.getTotal() * item.getQuantity());
         }
         
         System.out.print("\nWhat item will you change? : ");
