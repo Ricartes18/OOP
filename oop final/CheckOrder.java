@@ -11,7 +11,7 @@ public class CheckOrder {
     CheckOut checkOut = new CheckOut();
     for (int i = 0; i < cOrder.size(); i++) {
         Order item = cOrder.get(i);
-        System.out.printf("%n%d. %d x %-10s = P%.2f%n", i + 1, item.getQuantity(), item.getchName(), item.getTotal());
+        System.out.printf("%n%d. %d x %-10s = P%.2f%n", i + 1, item.getQuantity(), item.getchName(), item.getTotal() * item.getQuantity());
     }
     order.showTotal(cOrder);
     System.out.printf("%nTOTAL: \t\t    P%.2f%n", order.getTotal());
