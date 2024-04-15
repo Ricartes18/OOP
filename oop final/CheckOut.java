@@ -12,11 +12,19 @@ public class CheckOut {
         return cash;
     }
 
-    public void putCash(){
+    public void putCash(ArrayList<Order> cOrder){
         Scanner input = new Scanner(System.in);
-        System.out.print("Input your Cash: P");
-        setCash(input.nextDouble());
+        order.showTotal(cOrder);
+        
+        while (getCash() < order.getTotal()) {
+            System.out.print("Input your Cash: P");
+            setCash(input.nextDouble());
+            if (getCash() < order.getTotal()) {
+                System.out.println("Insufficient Cash. Please put proper amount.");
+            }                
+        }
         input.close();
+            
     }
 
     public void makeReceipt(ArrayList<Order> cOrder){
