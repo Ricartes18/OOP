@@ -89,15 +89,9 @@ public class Main {
         
     }
     public static void main(String[] args) {
-       // int exit = 0;
         
-
         menuItem();
         
         displayMenu();
-    
-         
-        //Order initem = cOrder.get(chosen);
-        //System.out.printf("%s %d", );
     }
 }
